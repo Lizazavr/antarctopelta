@@ -21,7 +21,7 @@ int a=0;
 static void show_line(int index, std::string contents, int cursor, void *data)
 {
     /* Функция обработчик всегда получает существующую строку */
-    assert(contents != NULL);
+
     
     /* Декларируем неиспользуемые параметры */
     UNUSED(cursor);
