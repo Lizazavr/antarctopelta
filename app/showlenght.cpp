@@ -19,11 +19,19 @@ void showlenght(text txt)
  */
 static void show_line(int index, std::string contents, int cursor, void *data)
 {
+    /* Функция обработчик всегда получает существующую строку */
+    assert(contents != NULL);
+    
+    /* Декларируем неиспользуемые параметры */
     UNUSED(cursor);
     UNUSED(index);
     UNUSED(data);
 
-
+    /* Выводим строку на экран */
+   
+    a++;
+    if (a % 2 == 1){
     printf("%lu", contents.length());
     }
+}
 
