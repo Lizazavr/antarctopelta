@@ -15,7 +15,7 @@ TEST(showlenght, norm)
 
     std::string output_text = "";
 
-    output_text += "line \n";
+    output_text += "line ";
     output_text += "line 22\n";
 
     testing::internal::CaptureStdout();
@@ -38,8 +38,7 @@ TEST(showlenght, zero)
 
      std::string output_text = "";
 
-     output_text += "\n";
-     output_text += "\n";
+     output_text += "";
 
      testing::internal::CaptureStdout();
 
