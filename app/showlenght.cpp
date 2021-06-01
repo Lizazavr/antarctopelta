@@ -13,6 +13,7 @@ void showlenght(text txt)
 {
     process_forward(txt, show_line, NULL);
 }
+int a=0;
 
 /**
  * Выводит содержимое указанного файла на экран
