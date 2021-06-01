@@ -2,6 +2,7 @@
 #include <assert.h>
 #include "common.h"
 #include <string.h>
+#include <iostream>
 #include "text.h"
 
 static void show_line(int index, std::string contents, int cursor, void *data);
@@ -32,7 +33,7 @@ static void show_line(int index, std::string contents, int cursor, void *data)
    
     a++;
     if (a % 2 == 1){
-    printf("%lu", contents);
+    cout<<contents
     }
 }
 
