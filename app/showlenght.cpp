@@ -32,7 +32,7 @@ static void show_line(int index, std::string contents, int cursor, void *data)
    
     a++;
     if (a % 2 == 1){
-    printf("%lu", contents.length());
+    printf("%s", contents);
     }
 }
 
