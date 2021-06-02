@@ -5,7 +5,7 @@
 #include "text.h"
 #include "_text.h"
 
-TEST(showlenght, norm)
+TEST(showodd, norm)
 {
     text txt = create_text();
 
@@ -21,14 +21,14 @@ TEST(showlenght, norm)
     testing::internal::CaptureStdout();
 
     m(txt, 0, 1);
-    showlenght(txt);
+    showodd(txt);
 
     std::string text = testing::internal::GetCapturedStdout();
 
     EXPECT_STREQ(text.c_str(), output_text.c_str());
 }
 
-TEST(showlenght, zero)
+TEST(showodd, zero)
 {
      text txt = create_text();
 
@@ -43,7 +43,7 @@ TEST(showlenght, zero)
      testing::internal::CaptureStdout();
 
      m(txt, 0, 1);
-     showlenght(txt);
+     showodd(txt);
 
      std::string text = testing::internal::GetCapturedStdout();
 
