@@ -27,6 +27,6 @@ void save(text txt, char *filename);
  */
 void load(text txt, char *filename);
 
-void showodd(text txt);
+void showlenght(text txt);
 
 #endif
