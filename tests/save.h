@@ -1,40 +1,126 @@
-#include <gtest/gtest.h>
-#include <gmock/gmock-matchers.h>
-#include <string>
+#ifndef SAVE_H
+#define SAVE_H
 
+#include "all_tests.h"
 
-using namespace std;
-
-#include "common.h"
-#include "text.h"
-#include "_text.h"
-
-TEST(save, line)
+TEST(save, nothing)
 {
     text txt = create_text();
+    save(txt, test_file_1.toStdString());
 
-    append_line(txt, "Hello world1");
-    append_line(txt, "Hello world2");
-    append_line(txt, "Hello world3");
+    QFile file(test_file_1);
+    bool res = file.open(QIODevice::ReadOnly);
+    ASSERT_EQ(res, true);
 
-    save(txt, "save.test.txt");
+    QString line_file;
+    auto line_text = txt->lines->begin();
 
-    text txt2 = create_text();
+    while (!file.atEnd()) {
+        line_file = file.readLine();
 
-    load(txt2, "save.test.txt");
+        ASSERT_STREQ(line_file.toStdString().c_str(), (*line_text + "\n").c_str() );
+        line_text++;
+    }
 
-    EXPECT_EQ(txt->myList.size(), txt2->myList.size());
-
-    string* txt_arr = new string[txt->myList.size()];
-    string* txt2_arr = new string[txt2->myList.size()] ;
-
-    copy(txt->myList.begin(), txt->myList.end(), txt_arr);
-    copy(txt2->myList.begin(), txt2->myList.end(), txt2_arr);
-
-    for(unsigned int i = 0; i < txt->myList.size(); i++)
-    EXPECT_STREQ(txt_arr[i].c_str(), txt2_arr[i].c_str());
-
-    free(txt);
-    free(txt2);
+    removeFiles();
 }
 
+TEST(save, one_line)
+{
+    text txt = create_text();
+    append_line(txt,"Write something");
+    save(txt, test_file_1.toStdString());
+
+    QFile file(test_file_1);
+    bool res = file.open(QIODevice::ReadOnly);
+    ASSERT_EQ(res, true);
+
+    QString line_file;
+    auto line_text = txt->lines->begin();
+
+    while (!file.atEnd()) {
+        line_file = file.readLine();
+
+        ASSERT_STREQ(line_file.toStdString().c_str(), (*line_text + "\n").c_str() );
+        line_text++;
+    }
+
+    removeFiles();
+}
+
+TEST(save, several_lines)
+{
+    text txt = create_text();
+    for (int i=0; i<10; i++)
+        append_line(txt,"Write something");
+    save(txt, test_file_1.toStdString());
+
+    QFile file(test_file_1);
+    bool res = file.open(QIODevice::ReadOnly);
+    ASSERT_EQ(res, true);
+
+    QString line_file;
+    auto line_text = txt->lines->begin();
+
+    while (!file.atEnd()) {
+        line_file = file.readLine();
+
+        ASSERT_STREQ(line_file.toStdString().c_str(), (*line_text + "\n").c_str() );
+        line_text++;
+    }
+
+    removeFiles();
+}
+
+TEST(save, empty_line)
+{
+    text txt = create_text();
+    append_line(txt,"");
+    save(txt, test_file_1.toStdString());
+
+    QFile file(test_file_1);
+    bool res = file.open(QIODevice::ReadOnly);
+    ASSERT_EQ(res, true);
+
+    QString line_file;
+    auto line_text = txt->lines->begin();
+
+    while (!file.atEnd()) {
+        line_file = file.readLine();
+
+        ASSERT_STREQ(line_file.toStdString().c_str(), (*line_text + "\n").c_str() );
+        line_text++;
+    }
+
+    removeFiles();
+}
+
+TEST(save, some_lines_are_empty)
+{
+    text txt = create_text();
+    for (int i=0; i<10; i++)
+        if (i%2==0) {
+            append_line(txt,"Write something");
+        } else {
+            append_line(txt,"");
+        }
+    save(txt, test_file_1.toStdString());
+
+    QFile file(test_file_1);
+    bool res = file.open(QIODevice::ReadOnly);
+    ASSERT_EQ(res, true);
+
+    QString line_file;
+    auto line_text = txt->lines->begin();
+
+    while (!file.atEnd()) {
+        line_file = file.readLine();
+
+        ASSERT_STREQ(line_file.toStdString().c_str(), (*line_text + "\n").c_str() );
+        line_text++;
+    }
+
+    removeFiles();
+}
+
+#endif // TEST_SQ_EQ_H
