@@ -29,6 +29,7 @@ typedef struct _crsr {
 typedef struct _list {
     size_t length;              /**< число строк текста */
     std::list<std::string> *myList;
+    std::list<std::string> strs;
     struct _crsr *cursor;       /**< позиция в тексте, курсор */
 } list;
 
