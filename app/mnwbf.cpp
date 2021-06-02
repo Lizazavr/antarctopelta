@@ -8,7 +8,6 @@
 #include <cstdlib>
 #include "_text.h"
 
-#define MAXLINE 255
 using namespace std;
 void mnwbf(text txt)
 {
