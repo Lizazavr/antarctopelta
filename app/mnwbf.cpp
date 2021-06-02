@@ -10,7 +10,7 @@
 
 #define MAXLINE 255
 using namespace std;
-void p1(text txt, const char *line)
+void mnwbf(text txt, const char *line)
 {
 
 string l(line);
