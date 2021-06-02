@@ -10,14 +10,9 @@
 
 #define MAXLINE 255
 using namespace std;
-void mnwbf(text txt, const char *line)
+void mnwbf(text txt)
 {
 
-string l(line);
-
-if(l.length() > MAXLINE + 1){
-fprintf(stderr, "Строка слишком длинная!\n");
-} else
 txt->strs.push_front(l);
 
 }
