@@ -91,8 +91,8 @@ int main()
                     mnwbf(txt);
                     continue;
                 }
-                if (strcmp(cmd, "showodd") == 0) {
-                    showodd(txt);
+                if (strcmp(cmd, "showlenght") == 0) {
+                    showlenght(txt);
                     continue;
                 }
 
