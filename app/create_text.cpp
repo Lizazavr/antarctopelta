@@ -8,19 +8,20 @@ text create_text()
 {
     text txt;
     
-        if ((txt = (_list *) malloc(sizeof(_list))) == NULL)
+        if ((txt = (list *) malloc(sizeof(list))) == NULL)
     {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
 
-    txt = new _list;
 
-    if ((txt->cursor = (_crsr *) malloc(sizeof(_crsr))) == NULL)
+    if ((txt->cursor = (crsr *) malloc(sizeof(crsr))) == NULL)
     {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
+    
+    txt->length=0;
 
     txt->myList = std::list<std::string>();
 
