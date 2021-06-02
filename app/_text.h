@@ -8,7 +8,6 @@
 #include <string>
 #include <assert.h>
 #include <list>
-
 #include "text.h"
 
 typedef struct _node {
