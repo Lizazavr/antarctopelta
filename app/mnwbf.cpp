@@ -18,7 +18,7 @@ string l(line);
 if(l.length() > MAXLINE + 1){
 fprintf(stderr, "Строка слишком длинная!\n");
 } else
-txt->myList.push_front(l);
+txt->myList->push_front(l);
 
 }
 
