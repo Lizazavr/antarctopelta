@@ -3,7 +3,6 @@
 #define COMMON_H
 #include "text.h"
 #include "_text.h"
-
 /* Декларирует неиспользуемый аргумент,
 
  * корректно подавляя предупреждение вида "unused parameter" */
