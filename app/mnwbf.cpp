@@ -11,7 +11,7 @@
 using namespace std;
 void mnwbf(text txt)
 {
-auto a =" ";
+string a =" ";
 txt->myList.push_front(a);
 
 }
