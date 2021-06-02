@@ -27,8 +27,6 @@ text create_text()
 
     txt->cursor->line = txt->myList.end();
     txt->cursor->position = 0;
-    
-    free(txt);
 
     return txt;
 }
