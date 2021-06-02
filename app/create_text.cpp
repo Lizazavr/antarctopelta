@@ -13,17 +13,15 @@ text create_text()
 
     txt = new _list;
 
-    if ((txt->cursor = (_crsr *) malloc(sizeof(_crsr))) == NULL)
-    {
-        fprintf(stderr, "Not enough memory!\n");
-        exit(EXIT_FAILURE);
-    }
+    txt->cursor = (_crsr *) malloc(sizeof(_crsr));
 
     txt->myList = std::list<std::string>();
 
 
     txt->cursor->line = txt->myList.end();
     txt->cursor->position = 0;
+    
+    free(txt);
 
     return txt;
 }
