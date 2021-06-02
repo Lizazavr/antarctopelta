@@ -6,7 +6,7 @@ void append_line(text txt, std::string contents)
     txt->myList.push_back(contents);
 
     // Указатель курсора ставим на последнюю строку  
-    txt->cursor->line = txt->myList->end();
+    txt->cursor->line = txt->myList.end();
     /* Ставим курсор на последнюю позицию в строке */ 
     txt->cursor->position = contents.length();
 
