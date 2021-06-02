@@ -17,5 +17,5 @@ void remove_all(text txt)
 //    assert(!txt->myList->empty());
 
     /* Очищаем лист */
-    txt->myList->clear();
+    txt->myList.clear();
 }
