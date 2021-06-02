@@ -47,7 +47,7 @@ TEST(mnwbf, next_line)
     testing::internal::CaptureStdout();
 
     m(txt, 0, 5);
-    mnwbf(text txt);
+    mnwbf(txt);
     show(txt);
 
     std::string text = testing::internal::GetCapturedStdout();
