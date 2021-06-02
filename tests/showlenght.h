@@ -21,7 +21,7 @@ TEST(showodd, norm)
     testing::internal::CaptureStdout();
 
     m(txt, 0, 1);
-    showodd(txt);
+    showlenght(txt);
 
     std::string text = testing::internal::GetCapturedStdout();
 
@@ -43,7 +43,7 @@ TEST(showodd, zero)
      testing::internal::CaptureStdout();
 
      m(txt, 0, 1);
-     showodd(txt);
+     showlenght(txt);
 
      std::string text = testing::internal::GetCapturedStdout();
 
