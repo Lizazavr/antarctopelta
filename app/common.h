@@ -24,7 +24,7 @@ void save(text txt, char *filename);
 /**
  * Загружает содержимое указанного файла
  */
-void load(text txt, std::string filename);
+void load(text txt, char *filename);
 
 void showlenght(text txt);
 
