@@ -10,7 +10,7 @@ static void show_line(int index, std::string contents, int cursor, void *data);
 /**
  * Выводит содержимое указанного файла на экран
  */
-void showodd(text txt)
+void showlenght(text txt)
 {
     process_forward(txt, show_line, NULL);
 }
