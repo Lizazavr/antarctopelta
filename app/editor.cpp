@@ -92,7 +92,7 @@ int main()
                     continue;
                 }
                 if (strcmp(cmd, "showodd") == 0) {
-                    showlenght(txt);
+                    showodd(txt);
                     continue;
                 }
 
