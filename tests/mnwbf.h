@@ -20,7 +20,7 @@ TEST(mnwbf, norm)
 
     testing::internal::CaptureStdout();
 
-    m(txt, 0, 1);
+    m(txt, 0, 0);
     mnwbf(txt);
     show(txt);
 
