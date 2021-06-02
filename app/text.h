@@ -12,7 +12,6 @@ typedef struct _list *text;
 typedef struct _crsr *cursor;
 
 
-text create_text();
 
 
 void append_line(text txt, std::string contents);
