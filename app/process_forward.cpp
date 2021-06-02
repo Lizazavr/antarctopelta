@@ -4,11 +4,11 @@ void process_forward(text txt,
                      void (*process)(int index, std::string contents, int cursor,
                                      void *data), void *data)
 {
-    /* Проверяем, имеется ли текст */
+    /* Проверяем, имеется ли текст 
     if (txt == NULL || txt->length == 0) {
         fprintf(stderr, "There are already no any lines in the text!\n");
         return;
-    }
+    }*/
 
 
     /* Стартуем с начальной строки текста */
