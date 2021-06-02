@@ -14,6 +14,7 @@ int main()
     char *cmd;
     char *arg;
     char *arg2;
+    char *argi;
 
     /* Создаем объект для представления текста */
     text txt = create_text();
@@ -86,10 +87,24 @@ int main()
             }
             continue;
         }
-                if (strcmp(cmd, "mnwbf") == 0) {
-                    void mnwbf(txt, *line);
-                    continue;
-                }
+	if (strcmp(cmd, "mnwbf") == 0) {
+/* передаем в арги содержание строки*/
+	    argi = strtok(NULL, "\0");
+
+	    if (argi == NULL )
+		fprintf(stderr, "Usage: i line\n");
+	    else{
+/*проверяем, не вышла ли строка за пределы stdin*/
+		if (strstr(argi, "\n") == NULL){
+		    fprintf(stderr, "the line is too long\n");
+		}
+		else{
+		    argi[strlen(argi)]='\0';
+		    mnwbf(txt, argi);
+		}
+	    }
+	    continue;
+	}
                 if (strcmp(cmd, "showlenght") == 0) {
                     showlenght(txt);
                     continue;
