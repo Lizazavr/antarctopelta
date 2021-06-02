@@ -14,8 +14,8 @@ TEST(mnwbf, norm)
 
     std::string output_text = "";
 
-    output_text += "\n";
-    output_text += "line 0\n";
+    output_text += " ";
+    output_text += "|line 0\n";
     output_text += "line 1\n";
 
     testing::internal::CaptureStdout();
