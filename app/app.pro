@@ -5,8 +5,6 @@ CONFIG -= qt
 
 SOURCES += \
     append_line.cpp \
-    create_text.cpp \
-    editor.cpp \
     load.cpp \
     m.cpp \
     mnwbf.cpp \
