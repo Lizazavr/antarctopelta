@@ -3,27 +3,30 @@
 #include "common.h"
 #include "text.h"
 #include "_text.h"
+#include <iostream>
+#include <fstream>
 /**
  * Загружает содержимое указанного файла
  */
 void load(text txt, char *filename)
 {
-    FILE *f;
-    char buf[MAXLINE + 1];
+    std::ifstream f;
+    f.open(filename);
 
-    /* Открываем файл для чтения, контролируя ошибки */
-   // if ((
-        f = fopen(filename, "r");
- /*   ) == NULL) {
-        printf("The file %s cannot be opened\n", filename);
+    if (!f.good()) {
+        std::cerr << "The file " << filename << " cannot be opened\n";
         return;
-    }*/
+    }
+
     /* Удаляем предыдущее содержимое */
     remove_all(txt);
-    /* Считываем содержимое строка за строкой */
-    while (fgets(buf, MAXLINE, f)) {
-        buf[strlen(buf) - 1] = '\0';
-        append_line(txt, std::string(buf));
+
+    std::string buf;
+
+    while (f.good()) {
+        f.getline(&buf[0], MAXLINE);
+        append_line(txt, buf);
     }
-    fclose(f);
+
+    f.close();
 }
