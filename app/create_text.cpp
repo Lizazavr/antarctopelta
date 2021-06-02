@@ -13,7 +13,7 @@ text create_text()
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
-
+txt = new _list;
 
     if ((txt->cursor = (crsr *) malloc(sizeof(crsr))) == NULL)
     {
