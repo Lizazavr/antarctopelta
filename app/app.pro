@@ -5,6 +5,8 @@ CONFIG -= qt
 
 SOURCES += \
     append_line.cpp \
+    create_text.cpp \
+    editor.cpp \
     load.cpp \
     m.cpp \
     mnwbf.cpp \
@@ -14,14 +16,11 @@ SOURCES += \
     save.cpp \
     show.cpp \
     showlenght.cpp
-
 HEADERS += \
         text.h \
         _text.h \
         common.h
-
 QMAKE_CFLAGS += -Wall -Wextra -Werror
-
 # gcov
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
