@@ -12,7 +12,7 @@ using namespace std;
 void mnwbf(text txt)
 {
 
-txt->strs.push_front(1);
+txt->myList.push_front(l);
 
 }
 
