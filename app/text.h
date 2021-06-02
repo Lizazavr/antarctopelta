@@ -30,7 +30,7 @@ void remove_all(text txt);
 
 
 int m(text txt, int line_num, int cursor_pos);
-void mnwbf(text txt);
+void mnwbf(text txt, const char *line);
 void rp(text txt);
 
 #endif
