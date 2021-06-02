@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 #include "text.h"
 #include "_text.h"
 #include "common.h"
