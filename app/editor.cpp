@@ -87,7 +87,7 @@ int main()
             continue;
         }
                 if (strcmp(cmd, "mnwbf") == 0) {
-                    mnwbf(txt);
+                    void mnwbf(txt, *line);
                     continue;
                 }
                 if (strcmp(cmd, "showlenght") == 0) {
