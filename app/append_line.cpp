@@ -3,6 +3,7 @@
 void append_line(text txt, std::string contents)
 {
     /* Добавляем в конец листа новую строку */ 
+    
     txt->myList.push_back(contents);
 
     // Указатель курсора ставим на последнюю строку  
