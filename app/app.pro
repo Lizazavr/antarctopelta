@@ -15,7 +15,7 @@ SOURCES += \
     rp.cpp \
     save.cpp \
     show.cpp \
-    showlenght.cpp
+    showodd.cpp
 
 HEADERS += \
         text.h \
