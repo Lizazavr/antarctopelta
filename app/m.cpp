@@ -9,13 +9,13 @@ int m(text txt, int line_num, int cursor_pos)
         return -1;
 
     /* Итератор строки, в которой должен стоять курсор */
-    std::list<std::string>::iterator current = txt->myList->begin();
+    std::list<std::string>::iterator current = txt->myList.begin();
     int index = 0;
 
 
     /*Идём до заданной строки */
     bool find_flag = false;
-    while (current != txt->myList->end()) {
+    while (current != txt->myList.end()) {
         if (line_num == index) {
             find_flag = true;
             break;
