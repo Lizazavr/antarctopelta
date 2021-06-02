@@ -12,12 +12,12 @@ void process_forward(text txt,
 
 
     /* Стартуем с начальной строки текста */
-    std::list<std::string>::iterator current = txt->myList->begin();
+    std::list<std::string>::iterator current = txt->myList.begin();
     int index = 0;
     int cursor_position = -1;
 
     /* К каждой строке текста применяем обработчик */
-    while (current != txt->myList->end()) {
+    while (current != txt->myList.end()) {
         if (txt->cursor->line == current)
             cursor_position = txt->cursor->position;
         else
