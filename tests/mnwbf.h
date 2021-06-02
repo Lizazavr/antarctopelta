@@ -22,7 +22,7 @@ TEST(mnwbf, norm)
     testing::internal::CaptureStdout();
 
     m(txt, 0, 1);
-    mnwbf(text txt);
+    mnwbf(txt);
     show(txt);
 
     std::string text = testing::internal::GetCapturedStdout();
