@@ -5,6 +5,7 @@
 #include "_text.h"
 
 /* Декларирует неиспользуемый аргумент,
+
  * корректно подавляя предупреждение вида "unused parameter" */
 #define UNUSED(x) (void)(x)
 
