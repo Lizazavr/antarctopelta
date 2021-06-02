@@ -1,7 +1,6 @@
 
 #ifndef COMMON_H
 #define COMMON_H
-
 #include "text.h"
 #include "_text.h"
 
