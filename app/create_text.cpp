@@ -22,7 +22,7 @@ text create_text()
         exit(EXIT_FAILURE);
     }
 
-    txt->myList = new std::list<std::string>();
+    txt->myList = std::list<std::string>();
 
 
     txt->cursor->line = txt->myList.end();
