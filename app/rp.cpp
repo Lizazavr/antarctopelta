@@ -6,9 +6,9 @@
 
 
 void rp(text txt) {
-    std::list<std::string>::iterator it = txt->myList->begin();
+    std::list<std::string>::iterator it = txt->myList.begin();
     int i, line = 0;
-    std::list<std::string>::iterator current = txt->myList->begin();
+    std::list<std::string>::iterator current = txt->myList.begin();
 /*ищем номер строки, в которой находится курсор*/
     while(current != txt->cursor->line) {
         current++;
@@ -20,11 +20,11 @@ void rp(text txt) {
         return;
 
     it--;
-    txt->myList->erase(it--);
+    txt->myList.erase(it--);
 
     if (line == 1) {
         current = current++;
-        txt->myList->begin() = current;
+        txt->myList.begin() = current;
         return;
     }
     for (i = 0; i < line-1; i++) {
