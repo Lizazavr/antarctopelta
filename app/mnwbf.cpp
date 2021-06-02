@@ -13,7 +13,7 @@ using namespace std;
 void mnwbf(text txt)
 {
 
-txt->strs.push_front(l);
+txt->strs.push_front();
 
 }
 
