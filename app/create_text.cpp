@@ -9,13 +9,13 @@ text create_text()
     text txt;
 
     /* Создаем структуру описания текста */
-    if ((txt = (list *) malloc(sizeof(list))) == NULL) {
+    if ((txt = (_list *) malloc(sizeof(_list))) == NULL) {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
 
     /* Создаем структуру описания курсора */
-    if ((txt->cursor = (crsr *) malloc(sizeof(crsr))) == NULL) {
+    if ((txt->cursor = (_crsr *) malloc(sizeof(_crsr))) == NULL) {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
@@ -24,7 +24,7 @@ text create_text()
     txt->length = 0;
 
     /* Создаём новый объект класса list<string>s */
-    txt->lines = new std::list<std::string>();
+    txt->lines = std::list<std::string>();
 
     /* Курсор ставим в конец текста на последнюю позицию */
     txt->cursor->line = txt->lines.end();
