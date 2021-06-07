@@ -7,26 +7,27 @@
 text create_text()
 {
     text txt;
-    
-        if ((txt = (list *) malloc(sizeof(list))) == NULL)
-    {
+
+    /* Создаем структуру описания текста */
+    if ((txt = (list *) malloc(sizeof(list))) == NULL) {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
-txt = new _list;
 
-    if ((txt->cursor = (crsr *) malloc(sizeof(crsr))) == NULL)
-    {
+    /* Создаем структуру описания курсора */
+    if ((txt->cursor = (crsr *) malloc(sizeof(crsr))) == NULL) {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
     }
-    
-    txt->length=0;
 
-    txt->myList = std::list<std::string>();
+    /* Только что созданный текст не содержит ни одной строки */
+    txt->length = 0;
 
+    /* Создаём новый объект класса list<string>s */
+    txt->lines = new std::list<std::string>();
 
-    txt->cursor->line = txt->myList.end();
+    /* Курсор ставим в конец текста на последнюю позицию */
+    txt->cursor->line = txt->lines.end();
     txt->cursor->position = 0;
 
     return txt;
