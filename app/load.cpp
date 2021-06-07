@@ -16,7 +16,7 @@ void load(text txt, char *filename)
 
     /* Открываем файл для чтения, контролируя ошибки */
     if ((f = fopen(filename, "r")) == NULL) {
-        printf("The file %s cannot be opened\n", filename);
+        printf("The file %p cannot be opened\n", filename);
      //   return;
     }
 
@@ -25,7 +25,7 @@ void load(text txt, char *filename)
 
     /* Считываем содержимое строка за строкой */
     while (fgets(buf, MAXLINE, f)) {
-        buf[strlen(buf) - 1] = '\0'
+        buf[strlen(buf) - 1] = '\0';
         append_line(txt, std::string(buf));
     }
 
