@@ -12,7 +12,6 @@ TEST(showodd, norm)
     append_line(txt, "lool lol\n");
     append_line(txt, "lool lool\n");
     append_line(txt, "lool loool\n");
-    append_line(txt, "lool looool\n");
 
     std::string output_text = "";
 
