@@ -15,6 +15,8 @@ int main()
     char *arg;
     char *arg2;
 
+	
+	
     /* Создаем объект для представления текста */
     text txt = create_text();
 
