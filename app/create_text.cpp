@@ -17,7 +17,7 @@ text create_text()
     txt = new _list;
 
  //   if (
-        (txt->cursor = (_crsr *) malloc(sizeof(_crsr));
+        txt->cursor = (_crsr *) malloc(sizeof(_crsr));
      /*   ) == NULL)
     {
         fprintf(stderr, "Not enough memory!\n");
