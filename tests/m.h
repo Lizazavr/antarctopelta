@@ -56,7 +56,7 @@ TEST(m, big)
     EXPECT_EQ(txt->cursor->position, 0);
 }
 
-TEST(m, big)
+TEST(m, big1)
 {
     text txt = create_text();
     txt->myList.push_back("0 lool\n");
@@ -70,7 +70,7 @@ TEST(m, big)
     EXPECT_EQ(txt->cursor->line_num, 0);
     EXPECT_EQ(txt->cursor->position, 0);
 }
-TEST(m, big)
+TEST(m, big2)
 {
     text txt = create_text();
     txt->myList.push_back("0 lool\n");
