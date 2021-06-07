@@ -4,6 +4,7 @@
  * Создает новый текстовый объект
  * @returns текст
  */
+/*aaaaaaaaaaaaaaa*/
 text create_text()
 {
     text txt;
