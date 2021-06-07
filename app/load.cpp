@@ -25,7 +25,7 @@ void load(text txt, char *filename)
 
     /* Считываем содержимое строка за строкой */
     while (fgets(buf, MAXLINE, f)) {
-        buf[strlen(buf) - 1] = '\0';
+        buf[strlen(buf) - 1] = '\0'
         append_line(txt, std::string(buf));
     }
 
