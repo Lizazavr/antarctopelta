@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "text.h"
 #include "_text.h"
 #include "common.h"
@@ -13,7 +14,6 @@ int main()
     char *cmd;
     char *arg;
     char *arg2;
-
 
     /* Создаем объект для представления текста */
     text txt = create_text();
