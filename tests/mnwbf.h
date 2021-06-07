@@ -5,18 +5,18 @@
 #include "text.h"
 #include "_text.h"
 
-TEST(mnwbf, norm)
+TEST(p1, norm)
 {
     text txt = create_text();
 
-    append_line(txt, "line 0\n");
-    append_line(txt, "line 1\n");
+    append_line(txt, "0 lool\n");
+    append_line(txt, "1 lool\n");
 
     std::string output_text = "";
 
     output_text += " ";
-    output_text += "|line 0\n";
-    output_text += "line 1\n";
+    output_text += "|0 lool\n";
+    output_text += "1 lool\n";
 
     testing::internal::CaptureStdout();
 
