@@ -29,6 +29,7 @@ TEST(showodd, zero)
      append_line(txt, "\n");
      std::string output_text = "";
      output_text += "\n";
+     output_text += "\n";
      testing::internal::CaptureStdout();
      m(txt, 0, 1);
      showlenght(txt);
