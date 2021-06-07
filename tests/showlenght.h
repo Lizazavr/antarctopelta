@@ -9,14 +9,15 @@ TEST(showodd, norm)
 {
     text txt = create_text();
 
-    append_line(txt, "line \n");
-    append_line(txt, "line 2\n");
-    append_line(txt, "line 22\n");
+    append_line(txt, "lool lol\n");
+    append_line(txt, "lool lool\n");
+    append_line(txt, "lool loool\n");
+    append_line(txt, "lool looool\n");
 
     std::string output_text = "";
 
-    output_text += "line \n";
-    output_text += "line 22\n";
+    output_text += "lool lol \n";
+    output_text += "lool loool\n";
 
     testing::internal::CaptureStdout();
 
