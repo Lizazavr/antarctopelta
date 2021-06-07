@@ -6,23 +6,23 @@
 text create_text()
 {
     text txt;
- //   if ((
+    if ((
         txt = (_list *) malloc(sizeof(_list));
- /*   ) == NULL)
+    ) == NULL)
     {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
-    }*/
+    }
 
     txt = new _list;
 
- //   if (
+    if (
         txt->cursor = (_crsr *) malloc(sizeof(_crsr));
-     /*   ) == NULL)
+        ) == NULL)
     {
         fprintf(stderr, "Not enough memory!\n");
         exit(EXIT_FAILURE);
-    }*/
+    }
     txt->myList = std::list<std::string>();
     txt->cursor->line = txt->myList.end();
     txt->cursor->position = 0;
