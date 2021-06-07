@@ -7,17 +7,17 @@ text create_text()
 {
     text txt;
     if ((
-        txt = (_list *) malloc(sizeof(_list));
+        txt = (_list *) malloc(sizeof(_list))
     ) == NULL)
     {
-        fprintf(stderr, "Not enough memory!\n");
+        fprintf(stderr, "Not enough memory!\n")
         exit(EXIT_FAILURE);
     }
 
     txt = new _list;
 
     if (
-        txt->cursor = (_crsr *) malloc(sizeof(_crsr));
+        txt->cursor = (_crsr *) malloc(sizeof(_crsr))
         ) == NULL)
     {
         fprintf(stderr, "Not enough memory!\n");
